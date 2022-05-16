@@ -1,0 +1,42 @@
+.bg-white {
+    background: #F7F7F7;
+    border: 1px solid #000000;
+    border-radius: 72px 72px 20px 20px;
+}
+
+.bg-white input {
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.bg-white textarea {
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+
+.bg-signin {
+    background: url("/img/Sign In bg.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 130vh;
+    padding: 81px 124px 80px 130px;
+}
+
+.bg-white .file-sec input {
+    background: #B71818;
+    border-radius: 10px;
+    padding: 14px 16px 13px 16px;
+}
+
+.bg-white .file-sec span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.file-sec img {
+    border: 3px solid #000000;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}

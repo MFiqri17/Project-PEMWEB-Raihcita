@@ -1,0 +1,90 @@
+.font-baskervville {
+    font-family: 'Baskervville', 'sans-serif';
+    font-size: 3.125rem;
+}
+
+.bg-logo {
+    background: url('/img/bg-logo.png') no-repeat center center;
+    background-size: cover;
+    padding-top: 99.79px;
+    filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+    padding-bottom: 217.56px;
+    border-radius: 72px 0px 0px 20px;
+    padding-left: 87px;
+}
+
+.bg-logo h1 {
+    margin-bottom: 60px;
+}
+
+.bg-white {
+    padding-bottom: 60px;
+    z-index: 99999 !important;
+    padding-top: 60px;
+}
+
+.bg-white h1 {
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.04em;
+}
+
+.bg-white form {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.bg-white form label {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+}
+
+.bg-white form .form-check label {
+    font-size: 12px !important;
+    font-weight: 300;
+}
+
+.bg-white form .form-check a {
+    font-size: 12px !important;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #000000 !important;
+}
+
+
+.bg-white form button {
+    background-color: #B71818;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.bg-white form button:hover {
+    border: 2px solid #B71818 !important;
+    background-color: #FFFFFF;
+    color: #B71818 !important;
+    border-radius: 10px !important;
+}
+
+.bg-white .footer {
+    margin-top: 37px;
+    font-size: 12px !important;
+    font-weight: 300;
+}
+
+.bg-white .footer span a {
+    margin-top: 37px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #000000 !important;
+}
+
+
+.row .radius {
+    border-radius: 0px 72px 20px 0px;
+}
+
+

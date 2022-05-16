@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('sign-in');
+});
+
+Route::get('/sign-in/admin', function () {
+    return view('sign-inAdmin');
+});
+
+Route::get('/sign-up', [RegistrationController::class, 'index']);
+Route::post('/sign-up', [RegistrationController::class, 'store']);
+
+Route::get('/register2', [RegistrationController::class, 'index2']);
+
+Route::post('/register2', [RegistrationController::class, 'store2']);
+
+Route::get('/dashboard', function() {
+    return view('dashbord');
 });

@@ -1,0 +1,14 @@
+.bg-signin {
+    background: url("/img/Sign In bg.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 110vh;
+    padding: 81px 124px 100px 130px;
+}
+
+.bg-white {
+    padding-bottom: 30px;
+    z-index: 99999 !important;
+    padding-top: 30px;
+}
+
+

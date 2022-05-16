@@ -1,0 +1,10 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-signin {
+    background: url("/img/Sign In bg.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    padding: 81px 124px 80px 130px;
+}

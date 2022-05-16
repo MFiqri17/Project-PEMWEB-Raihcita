@@ -1,0 +1,56 @@
+#main-wrapper aside {
+    background: #000000 !important;
+}
+
+#main-wrapper .page-wrapper {
+    background: #ffffff !important;
+}
+
+#main-wrapper aside .profile {
+    margin-top: 194px;
+}
+
+#main-wrapper aside .profile h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+#main-wrapper aside .profile p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #B71818;
+}
+
+#main-wrapper aside .buton .btn-primary {
+    background: transparent;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    padding: 13px 40px 11px 40px;
+    border:none !important;
+    color: #FFFFFF;
+}
+
+#main-wrapper aside .buton button:hover {
+    background: #B71818;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+#main-wrapper .page-wrapper .page-title {
+    margin-top: 80px;
+}
