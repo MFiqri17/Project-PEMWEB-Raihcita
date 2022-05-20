@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class RegistrationController extends Controller
@@ -41,16 +43,31 @@ class RegistrationController extends Controller
               'password_confirmation' => 'required',
           ]);    
           
-          $valildatedData['password'] = bcrypt($validatedData['password']);
+          
+          
 
           if(empty($request->session()->get('user'))){
             $user = new User();
-            $user->fill($validatedData);
+            $user->fill(
+                [
+                    'name' => $validatedData['name'],
+                    'email' => $validatedData['email'],
+                    'password' => Hash::make($validatedData['password']),
+                    'password_confirmation' => Hash::make($validatedData['password_confirmation']),
+                ]
+            );
             $request->session()->put('user', $user);
           }
           else{
             $user = $request->session()->get('user');
-            $user->fill($validatedData);
+            $user->fill(
+                [
+                    'name' => $validatedData['name'],
+                    'email' => $validatedData['email'],
+                    'password' => Hash::make($validatedData['password']),
+                    'password_confirmation' => Hash::make($validatedData['password_confirmation']),
+                ]
+            );
             $request->session()->put('user', $user);
           }
 
@@ -96,48 +113,14 @@ class RegistrationController extends Controller
 
     }
 
+
+
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

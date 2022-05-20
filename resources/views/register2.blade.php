@@ -49,7 +49,7 @@
                     <label for="deskripsi"  class="col-form-label">Deskripsi</label>
                 </div>
                 <div class="col-7">
-                    <textarea  id="deskripsi" name="deskripsi" class="form-control" aria-describedby="passwordHelpInline"></textarea>
+                    <textarea  id="deskripsi" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" aria-describedby="passwordHelpInline"></textarea>
                 </div>
             </div>
             <div class="row g-3 py-3  d-flex justify-content-center align-items-center">
@@ -57,7 +57,7 @@
                     <label for="skill" class="col-form-label">Skill</label>
                 </div>
                 <div class="col-7">
-                    <input type="text" id="skill" name="skill" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="text" id="skill" name="skill" class="form-control @error('skill') is-invalid @enderror" aria-describedby="passwordHelpInline">
                 </div>
             </div>
             <div class="row g-3 py-3  d-flex justify-content-center align-items-center">
@@ -65,7 +65,7 @@
                     <label for="pengalaman" class="col-form-label">Pengalaman</label>
                 </div>
                 <div class="col-7">
-                    <input type="text" id="pengalaman" name="pengalaman" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="text" id="pengalaman" name="pengalaman" class="form-control @error('pengalaman') is-invalid @enderror" aria-describedby="passwordHelpInline">
                 </div>
             </div>
             <div class="row g-3 py-3 d-flex justify-content-center">

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('deskripsi')->nullable();
             $table->string('pengalaman')->nullable();
             $table->string('skill')->nullable();
-            $table->string('image')->nullable()->default('/img/person.png');
+            $table->string('image')->nullable()->default('https://cdn.onlinewebfonts.com/svg/img_210318.png');
             $table->rememberToken();
             $table->timestamps();
         });
