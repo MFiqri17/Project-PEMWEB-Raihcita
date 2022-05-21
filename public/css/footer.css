@@ -1,0 +1,57 @@
+footer .row h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    /* Cold Grey/white */
+    
+    color: #FFFFFF;
+    
+}
+
+footer .row h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    /* Cold Grey/white */
+
+    color: #FFFFFF;
+}
+
+footer .row p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    /* Cold Grey/white */
+
+    color: #FFFFFF;
+}
+
+footer .row h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #D8D7D7 !important;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

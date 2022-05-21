@@ -12,6 +12,17 @@ class BeasiswaControllers extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function show(){
+        
+        return view('beasiswa', ['beasiswa' => Beasiswa::latest()->filter(request(['search']))->paginate(6)]);
+    }
+
+    public function detail($id){
+        $beasiswa = Beasiswa::findorfail($id);
+        return view('detailBeasiswa', compact('beasiswa'));
+    }
+
     public function index()
     {
         $beasiswa = Beasiswa::all();
@@ -20,7 +31,7 @@ class BeasiswaControllers extends Controller
 
     public function adminForm()
     {
-        return view('adminForm');
+        return view('addBeasiswa');
     }
 
     /**
@@ -49,6 +60,7 @@ class BeasiswaControllers extends Controller
             'endDate' => 'required',
             'link' => 'required',
             'description' => 'required',
+            'requirement' => 'required',
             'image' => 'image|file|max:1000|mimes:jpg,png,jpeg,gif',
         ]);
         
@@ -70,10 +82,6 @@ class BeasiswaControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -85,7 +93,7 @@ class BeasiswaControllers extends Controller
 
      public function edit(Request $request, $id) {
         $beasiswa = Beasiswa::findOrFail($id);
-        return view('edit', compact('beasiswa'));
+        return view('updateBeasiswa', compact('beasiswa'));
      }
 
     /**
@@ -113,12 +121,13 @@ class BeasiswaControllers extends Controller
             $beasiswa->endDate = $request->endDate;
             $beasiswa->link = $request->link;
             $beasiswa->description = $request->description;
+            $beasiswa->requirement = $request->requirement;
             if($request->file('image')){
                 $beasiswa->image = $request->file('image')->store('beasiswa-images');
             }
             $beasiswa->save();
             
-            return redirect()->back()->with('success','Data updated successfully');
+            return redirect('/dashboard');
         
     }
 
@@ -128,8 +137,9 @@ class BeasiswaControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Beasiswa $beasiswa)
     {
-        //
+        $beasiswa->delete();
+        return redirect('/dashboard')->with('success', 'Data Beasiswa Berhasil Dihapus');
     }
 }

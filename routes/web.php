@@ -16,7 +16,7 @@ use App\Http\Controllers\BeasiswaControllers;
 |
 */
 
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index'])->name('sign-in');
 // Route::post('/', [LoginController::class, 'authenticate'])->name('login');
 
 
@@ -36,11 +36,22 @@ Route::get('/homepage', function(){
     return view('homepage');
 })->name('homepage');
 
+Route::get('/beasiswa', [BeasiswaControllers::class, 'show']);
+Route::get('/beasiswa/{id}', [BeasiswaControllers::class, 'detail'])->name('detailBeasiswa');
+
+
+
+
+
 Route::get('/dashboard', [BeasiswaControllers::class, 'index']);
 
+Route::delete('/dashboard/delete/{beasiswa}', [BeasiswaControllers::class, 'destroy'])->name('deleteBeasiswa');
 
-Route::get('/
-', [BeasiswaControllers::class, 'adminForm']);
-Route::post('/adminForm', [BeasiswaControllers::class, 'store']);
 
-Route::get('/adminForm/{id}', [BeasiswaControllers::class, 'edit']);
+Route::get('/dashboard/addBeasiswa', [BeasiswaControllers::class, 'adminForm'])->name('addBeasiswa');
+Route::post('/dashboard/addBeasiswa', [BeasiswaControllers::class, 'store'])->name('StoreaddBeasiswa');
+
+Route::get('/dashboard/updateBeasiswa/{id}', [BeasiswaControllers::class, 'edit'])->name('updateBeasiswa');
+Route::post('/dashboard/updateBeasiswa/{id}', [BeasiswaControllers::class, 'update'])->name('StoreupdateBeasiswa');
+
+

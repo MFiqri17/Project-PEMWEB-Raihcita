@@ -16,6 +16,7 @@ class Beasiswa extends Model
         'endDate',
         'link',
         'description',
+        'requirement',
     ];
 
     protected $guarded = [
@@ -23,4 +24,12 @@ class Beasiswa extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function scopeFilter($query, array $filters)
+    {
+        $query->when($filters['search'] ?? null, function ($query, $search) {
+            $query->where('name', 'like', '%' . $search . '%')
+                ->orWhere('description', 'like', '%' . $search . '%');
+        });
+    }
 }

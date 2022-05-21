@@ -4,41 +4,12 @@
     height: 100vh;
 }
 
-.navbar {
-    padding-left: 144px;
-    padding-right: 144px;
-}
 
-nav .nav-item a{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    /* identical to box height */
 
-    text-align: center;
-    letter-spacing: 0.02em;
 
-    /* 2 */
 
-    color: #F7F7F7;
-}
-
-nav .about {
-    padding-left: 110px;
-    padding-right: 110px;
-}
-
-nav .login {
-    padding-left: 57px;
-
-}
-
-nav .login button {
-    border: 1px solid #F7F7F7;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #F7F7F7 !important;
-    
+.home {
+    margin-top: 140px;
 }
 
 
@@ -53,3 +24,129 @@ nav .login button {
 
     color: #F7F7F7;
 }
+
+.home p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 124px;
+    /* 2 */
+
+    color: #F7F7F7;
+}
+
+.choise {
+    margin-top: 109px;
+    column-gap: 190px;
+}
+
+.service {
+    background: linear-gradient(180deg, rgba(234, 234, 234, 0.13) -2.85%, rgba(234, 234, 234, 0) 18.94%), #1F1F1F;
+border-radius: 120px 120px 0px 0px;
+    border-radius-top: 120px;
+    margin-top: 101px;
+}
+
+
+
+.bg-black {
+    background: #1F1F1F;
+    padding-top: 109px;
+    height: 290vh;
+}
+
+.bg-black h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    letter-spacing: 0.06em;
+
+    color: #F8F8F8;
+
+}
+
+.bg-black .card {
+    border-radius: 20px;
+}
+
+
+.bg-black .card  {
+    padding: 168px 0px 27px 0px !important; 
+}
+
+
+.bg-black .card a {
+    background: #B71818;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    padding: 16px 21px 16px 21px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* 2 */
+
+    color: #F7F7F7;
+}
+
+.bg-black .beasiswa {
+    background: url("/img/beasiswa.png");
+    background-size: cover;
+}
+
+.bg-black .lomba {
+    background: url("/img/lomba.png");
+    background-size: cover;
+    
+}
+
+.service h2 {
+    padding: 136px 421px 0px 116px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 61px;
+    letter-spacing: 0.05em;
+
+    /* 2 */
+
+    color: #F7F7F7;
+
+}
+
+.service h2 span {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+    letter-spacing: 0.05em;
+
+    /* primer */
+
+    color: #B71818;
+
+}
+
+.service h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+    padding-left: 270px;
+    /* 2 */
+    margin-top: 60px;
+
+    color: #F7F7F7;
+
+    opacity: 0.15;
+}
+

@@ -1,0 +1,88 @@
+.bg-beasiswa {
+    background: url('/img/bg-beasiswa.png');
+    background-size: cover;
+}
+
+.search {
+    margin-top: 52px;
+}
+
+.search input {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+    letter-spacing: -0.5px;
+
+    color: #C4C4C4;
+}
+
+.card {
+    background: transparent;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.card span {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+
+    /* 2 */
+
+    color: #F7F7F7;
+}
+
+.card h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    /* or 160% */
+
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* 2 */
+
+    color: #F7F7F7;
+
+}
+
+.card p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 32px;
+    /* or 213% */
+
+    text-align: center;
+
+    /* 2 */
+
+    color: #F7F7F7;
+}
+
+.card a {
+    background: #B71818;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 32px;
+    /* identical to box height, or 213% */
+
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* 2 */
+
+    color: #F7F7F7;
+
+}

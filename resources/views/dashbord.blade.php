@@ -19,8 +19,7 @@
                     </div>
                     <div class="col-7">
                         <div class="text-end upgrade-btn">
-                            <a href="/adminForm" class="btn btn-danger text-white"
-                                target="_blank">ADD NEW BEASISWA</a>
+                            <a  href="{{route('addBeasiswa')}}" class="btn btn-danger text-white">ADD NEW BEASISWA</a>
                         </div>
                     </div>
                 </div>
@@ -54,25 +53,32 @@
                                                 <div class="d-flex align-items-center">
                                                     <div class="mr-3">
                                                         
-                                                        <img src="{{ asset('storage/' . $beasiswa->image) }}" alt="">
+                                                        <img style="width:65px; height:55px" src="{{ asset('storage/' . $beasiswa->image) }}" alt="">
                                                         
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>{{$beasiswa->name}}</td>
-                                            <td>{{$beasiswa->startDate}}</td>
+                                            <td class="text-center">{{date('d F y', strtotime($beasiswa->startDate))}} <br> - <br> {{date('d F y', strtotime($beasiswa->endDate))}} </td>
                                             <td>
                                                 {{$beasiswa->organizer}}
                                             </td>
                                             <td>{{$beasiswa->link}}</td>
-                                            <td>{{$beasiswa->description}}</td>
-                                            <td class="d-flex justify-content-start ">
-                                                <div>
-                                                    <img src="/img/pen.png" alt="">
+                                            <td>{{$beasiswa->description}} <br> {{$beasiswa->requirement}}</td>
+                                            <td>
+                                                <div class="d-inline">
+                                                    <a href="{{route('updateBeasiswa', $beasiswa->id)}}"><img src="/img/pen.png" alt=""></a>
                                                 </div>
-                                                <div class="ms-5">
-                                                    <img src="/img/trash.png" alt="">
-                                                </div> 
+                                                   
+                                                
+                                                <form action="{{route('deleteBeasiswa', $beasiswa->id)}}" method="POST" class="d-inline">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button type="submit" style="border: none !important; background: transparent;" onclick="return confirm('are you sure want to delete {{$beasiswa->name}}')"> <img class="ms-5" src="/img/trash.png" alt=""></button>  
+                                                </form>  
+
+ 
+                                                
                                             </td>
                                         </tr>
                                         @endforeach

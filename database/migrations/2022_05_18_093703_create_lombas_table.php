@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('endDate');
             $table->string('link');
             $table->string('description');
+            $table->string('requirement');
             $table->string('image');
             $table->timestamps();
         });
