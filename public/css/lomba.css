@@ -107,4 +107,20 @@
 
 }
 
+.notFound {
+    
+font-family: 'Montserrat';
+margin-top: 25px;
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+
+
+/* primer */
+
+color: #B71818;
+}
+
 

@@ -55,3 +55,7 @@ footer .row h3 {
     order: 0;
     flex-grow: 0;
 }
+
+footer .social svg {
+    color: white !important;
+}

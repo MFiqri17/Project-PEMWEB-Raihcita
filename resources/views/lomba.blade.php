@@ -60,7 +60,7 @@
       </div>   
     @endforeach
   @else
-  <p class="text-center text-white">Not found</p>
+  <p class="text-center notFound text-white"> <span style="color:#B71818">Not</span>  found</p>
   @endif
 </div>
 

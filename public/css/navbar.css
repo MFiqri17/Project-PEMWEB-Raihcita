@@ -21,8 +21,26 @@ nav .nav-item a{
     letter-spacing: 0.02em;
 
     /* 2 */
+    
 
     color: #F7F7F7;
+}
+
+
+
+nav .nav-item a:hover{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* 2 */
+    border-bottom: 2px solid #B71818 !important;
+
+    color: #B71818;
 }
 
 nav .about {

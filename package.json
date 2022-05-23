@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@jkryszto/mdb-for-laravel": "^1.0.0",
+        "font-awesome": "^4.7.0",
         "mdb-ui-kit": "^4.0.0"
     }
 }

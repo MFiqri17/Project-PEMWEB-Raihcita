@@ -15,9 +15,13 @@
       </div>
       <div class="col-3">
         <h3>Contact Us</h3>
-        <h3>Get started</h3>
-        <div>
-
+        <h3 class="my-5">Get started</h3>
+        <div class="d-flex social justify-content-center ">
+         <a href=""><img src="/img/facebook.png" alt=""></a>
+         <a class="mx-4" href=""><img src="/img/github.png" alt=""></a>
+         <a href=""><img src="/img/twitter.png" alt=""></a>
+         <a class="mx-4" href=""><img src="/img/linkedin.png" alt=""></a>
+         <a href=""><img src="/img/figma.png" alt=""></a>
         </div>
       </div>
     </div>

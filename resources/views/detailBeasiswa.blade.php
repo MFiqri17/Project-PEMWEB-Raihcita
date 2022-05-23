@@ -29,7 +29,7 @@
  <div class="row justify-content-center">
      <div class="col-3">
         <div class="pic">
-            <img  data-aos="fade-right" data-aos-duration="2000" style="width:292.79px; height:478.53px;" src="/img/test.png" alt="">
+            <img  data-aos="fade-right" data-aos-duration="2000" style="width:292.79px; height:478.53px;" src="{{ asset('storage/' . $beasiswa->image) }}" alt="">
         </div>
         <div  data-aos="fade-up" data-aos-duration="2000" class="organizer text-center">
             <p>Penyelenggara:</p>

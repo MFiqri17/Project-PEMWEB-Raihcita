@@ -21,7 +21,7 @@
     
     @yield('js')
 
-    <title>Hello, world!</title>
+    <title>Raih Cita</title>
   </head>
   <body>
     
