@@ -29,33 +29,33 @@
  <div class="row justify-content-center">
      <div class="col-3">
         <div class="pic">
-            <img  data-aos="fade-right" data-aos-duration="2000" style="width:292.79px; height:478.53px;" src="/img/test.png" alt="">
+            <img data-aos="fade-right" data-aos-duration="2000" style="width:292.79px; height:478.53px;" src="/img/test.png" alt="">
         </div>
-        <div  data-aos="fade-up" data-aos-duration="2000" class="organizer text-center">
+        <div data-aos="fade-up" data-aos-duration="2000" class="organizer text-center">
             <p>Penyelenggara:</p>
-            <p>{{$beasiswa->organizer}}</p>
+            <p>{{$lomba->organizer}}</p>
         </div>
      </div>  
-     <div  data-aos="fade-left" data-aos-duration="2000" class="ms-4 detail col-6 text-white">
+     <div data-aos="fade-left" data-aos-duration="2000" class="ms-4 detail col-6 text-white">
          <div class="header">
-            <h1>{{$beasiswa->name}}</h1>
-            <h2>Tanggal Pendaftaran: {{date('d F y', strtotime($beasiswa->startDate))}} - {{date('d F y', strtotime($beasiswa->endDate))}}</h2>
+            <h1>{{$lomba->name}}</h1>
+            <h2>Tanggal Pendaftaran: {{date('d F y', strtotime($lomba->startDate))}} - {{date('d F y', strtotime($lomba->endDate))}}</h2>
         </div>
 
         <div class="desc">
-            <h3>{{$beasiswa->description}}.</h3>
+            <h3>{{$lomba->description}}.</h3>
         </div>
 
         <div class="req">
             <p>Syarat</p>
             <ul class="ms-3">
-                @foreach(explode(',',$beasiswa->requirement) as $req)
+                @foreach(explode(',',$lomba->requirement) as $req)
                     <li>{{ $req }}</li>
                 @endforeach
             </ul>
         </div>
         
-        <a class="px-5 py-3" href="{{$beasiswa->link}}">Daftar</a>
+        <a class="px-5 py-3" href="{{$lomba->link}}">Daftar</a>
 
 
 

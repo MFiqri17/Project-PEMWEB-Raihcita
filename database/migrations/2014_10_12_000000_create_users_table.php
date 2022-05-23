@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('pengalaman')->nullable();
             $table->string('skill')->nullable();
             $table->string('image')->nullable()->default('https://cdn.onlinewebfonts.com/svg/img_210318.png');
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

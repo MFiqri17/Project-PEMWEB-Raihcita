@@ -1,5 +1,6 @@
 #main-wrapper aside {
     background: #000000 !important;
+    position: fixed;
 }
 
 #main-wrapper .page-wrapper {
@@ -7,7 +8,7 @@
 }
 
 #main-wrapper aside .profile {
-    margin-top: 194px;
+    margin-top: 124px;
 }
 
 #main-wrapper aside .profile h4 {
@@ -26,16 +27,20 @@
     line-height: 17px;
     /* identical to box height */
     color: #B71818;
+    margin-bottom: 114px;
 }
 
-#main-wrapper aside .buton .btn-primary {
+#main-wrapper aside .buton button {
     background: transparent;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
-    padding: 13px 40px 11px 40px;
+    position: absolute;
+    width: 193px;
+    height: 41px;
+    left: -20px;
+    top: 333px;
     border:none !important;
     color: #FFFFFF;
 }
@@ -51,12 +56,23 @@
     color: #FFFFFF;
 }
 
+#main-wrapper aside .buton .active  {
+    background: #B71818;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
 #main-wrapper .page-wrapper .page-title {
     margin-top: 80px;
 }
 
 nav .logout {
-    margin-top: 220px;
+    margin-top: 280px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;

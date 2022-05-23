@@ -10,24 +10,34 @@
         <div class="row d-flex justify-content-center">
             
             <div class="col-4  text-white bg-logo ">
-                <h1 class="font-baskervville ">UDAH</h1>
                 <img src="/img/logo.png" alt="" width="230">
             </div>
             <div class="col-6 align-self-center  bg-white radius ">
                 <h1 class="text-center font-weight-bold">Sign In Admin</h1>
-                <form>
+                <form action="{{route('login')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email</label>
-                      <input type="email" class="form-control rounded" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control rounded" id="exampleInputPassword1">
-                    </div>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control rounded @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp">
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control rounded @error('password') is-invalid @enderror" id="password">
+                        @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                      </div>
                     <div class="mb-3 form-check">
                         <div class="row">
                             <div class="col">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Biarkan saya tetap masuk</label>
                             </div>
                             <div class="col text-end">

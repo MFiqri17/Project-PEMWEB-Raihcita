@@ -2,6 +2,12 @@
     background: url('/img/bg-home.png');
     background-size: cover;
     height: 100vh;
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 
@@ -9,7 +15,7 @@
 
 
 .home {
-    margin-top: 140px;
+    padding-top: 240px;
 }
 
 
@@ -55,7 +61,7 @@ border-radius: 120px 120px 0px 0px;
 .bg-black {
     background: #1F1F1F;
     padding-top: 109px;
-    height: 290vh;
+    background-size: 100%;
 }
 
 .bg-black h1 {
@@ -86,6 +92,7 @@ border-radius: 120px 120px 0px 0px;
     border-radius: 10px;
     font-style: normal;
     font-weight: 600;
+    border: none;
     font-size: 20px;
     line-height: 32px;
     /* identical to box height, or 160% */
@@ -96,6 +103,24 @@ border-radius: 120px 120px 0px 0px;
     /* 2 */
 
     color: #F7F7F7;
+}
+
+.bg-black .card a:hover {
+    background: transparent;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid #B71818;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    padding: 16px 21px 16px 21px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* 2 */
+
+    color: #B71818;
 }
 
 .bg-black .beasiswa {

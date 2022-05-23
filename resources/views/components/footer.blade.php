@@ -1,4 +1,4 @@
-<footer>
+<footer style="background: #1F1F1F; padding-top: 42px;" >
     <div class="row justify-content-center align-items-start">
       <div class="col-4">
         <img src="/img/RaihAsa.png" alt="">

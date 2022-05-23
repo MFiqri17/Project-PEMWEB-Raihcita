@@ -1,6 +1,7 @@
-.bg-beasiswa {
-    background: url('/img/bg-beasiswa.png');
-    background-size: cover;
+.bg-lomba {
+    background: url('/img/bg-lomba.png');
+    background-size: 100%;
+     background-repeat: no-repeat;
 }
 
 .search {
@@ -76,9 +77,8 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 32px;
-    border: none;
     /* identical to box height, or 213% */
-
+    border: none;
     text-align: center;
     letter-spacing: 1px;
 
@@ -87,6 +87,7 @@
     color: #F7F7F7;
 
 }
+
 
 .card a:hover {
     background: transparent;
@@ -105,4 +106,5 @@
     color: #B71818;
 
 }
+
 

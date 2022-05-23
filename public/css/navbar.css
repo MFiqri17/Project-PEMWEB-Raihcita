@@ -1,9 +1,15 @@
+
+ 
+
 .navbar {
     padding-left: 144px;
     padding-right: 144px;
 }
 
-
+.fixed-top .scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  }
 
 nav .nav-item a{
     font-weight: 500;
@@ -35,3 +41,4 @@ nav .login button {
     background-color: transparent;
     color: #F7F7F7 !important;
 }
+

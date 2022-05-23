@@ -15,11 +15,11 @@
             <div class="page-breadcrumb">
                 <div class="row align-items-end">
                     <div class="col-5">
-                        <h4 class="page-title">Beasiswa List</h4>
+                        <h4 class="page-title">Lomba List</h4>
                     </div>
                     <div class="col-7">
                         <div class="text-end upgrade-btn">
-                            <a  href="{{route('addBeasiswa')}}" class="btn btn-danger text-white">ADD NEW BEASISWA</a>
+                            <a  href="{{route('addLomba')}}" class="btn btn-danger text-white">ADD NEW LOMBA</a>
                         </div>
                     </div>
                 </div>
@@ -47,34 +47,34 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($beasiswa as $beasiswa)
+                                        @foreach($lomba as $lomba)
                                         <tr>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="mr-3">
                                                         
-                                                        <img style="width:65px; height:55px" src="{{ asset('storage/' . $beasiswa->image) }}" alt="">
+                                                        <img style="width:65px; height:55px" src="{{ asset('storage/' . $lomba->image) }}" alt="">
                                                         
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>{{$beasiswa->name}}</td>
-                                            <td class="text-center">{{date('d F y', strtotime($beasiswa->startDate))}} <br> - <br> {{date('d F y', strtotime($beasiswa->endDate))}} </td>
+                                            <td>{{$lomba->name}}</td>
+                                            <td class="text-center">{{date('d F y', strtotime($lomba->startDate))}} <br> - <br> {{date('d F y', strtotime($lomba->endDate))}} </td>
                                             <td>
-                                                {{$beasiswa->organizer}}
+                                                {{$lomba->organizer}}
                                             </td>
-                                            <td>{{$beasiswa->link}}</td>
-                                            <td>{{$beasiswa->description}} <br> {{$beasiswa->requirement}}</td>
-                                            <td>
-                                                <div class="d-inline">
-                                                    <a href="{{route('updateBeasiswa', $beasiswa->id)}}"><img src="/img/pen.png" alt=""></a>
+                                            <td>{{$lomba->link}}</td>
+                                            <td>{{$lomba->description}} <br> {{$lomba->requirement}}</td>
+                                            <td class="d-flex">
+                                                <div>
+                                                    <a href="{{route('updateLomba', $lomba->id)}}"><img src="/img/pen.png" alt=""></a>
                                                 </div>
                                                    
                                                 
-                                                <form action="{{route('deleteBeasiswa', $beasiswa->id)}}" method="POST" class="d-inline">
+                                                <form action="{{route('deleteLomba', $lomba->id)}}" method="POST" class="">
                                                     @method('delete')
                                                     @csrf
-                                                    <button type="submit" style="border: none !important; background: transparent;" onclick="return confirm('are you sure want to delete {{$beasiswa->name}}')"> <img class="ms-5" src="/img/trash.png" alt=""></button>  
+                                                    <button  type="submit" style="border: none !important; background: transparent;" onclick="return confirm('are you sure want to delete {{$lomba->name}}')"> <img class="ms-5" src="/img/trash.png" alt=""></button>  
                                                 </form>  
 
  

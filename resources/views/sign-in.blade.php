@@ -36,7 +36,7 @@
                     <div class="mb-3 form-check">
                         <div class="row">
                             <div class="col">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Biarkan saya tetap masuk</label>
                             </div>
                             <div class="col text-end">
@@ -59,4 +59,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("*passwordbox-id*");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
 @endsection

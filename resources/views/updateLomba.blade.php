@@ -49,35 +49,35 @@
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         @include('components.sidebar')
         <div class="page-wrapper"> 
-            <form action="{{route('StoreaddBeasiswa')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('StoreupdateLomba', $lomba->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                  <label for="name" class="form-label">Beasiswa Name</label>
-                  <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp">
+                  <label for="name" class="form-label">Lomba Name</label>
+                  <input type="text" value="{{$lomba->name}}" name="name" class="form-control" id="name" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="organizer" class="form-label">Beasiswa Organizer</label>
-                  <input type="text" name="organizer" class="form-control" id="organizer">
+                  <label for="organizer" class="form-label">Lomba Organizer</label>
+                  <input type="text" value="{{$lomba->organizer}}" name="organizer" class="form-control" id="organizer">
                 </div>
                 <div class="mb-3">
                 <label for="from" class="form-label">Start Date</label>
-                <input  type="text" name="startDate" class="form-control" id="from">
+                <input  type="text" value="{{$lomba->startDate}}" name="startDate" class="form-control" id="from">
                 </div>
                 <div class="mb-3">
                 <label for="to" class="form-label">End Date</label>
-                <input type="text" name="endDate" class="form-control" id="to">
+                <input type="text" value="{{$lomba->endDate}}" name="endDate" class="form-control" id="to">
                 </div>
                 <div class="mb-3">
                 <label for="link" class="form-label">Link Registration</label>
-                <input type="text" name="link" class="form-control" id="link">
+                <input type="text" value="{{$lomba->link}}" name="link" class="form-control" id="link">
                 </div>
                 <div class="mb-3">
                 <label for="desc" class="form-label">Description </label>
-                <textarea type="text" name="description" class="form-control" id="desc"></textarea>
+                <textarea type="text"  name="description" class="form-control" id="desc">{{$lomba->description}}</textarea>
                 </div>
                 <div class="mb-3">
                   <label for="req" class="form-label">Requirement</label>
-                  <textarea type="text" name="requirement" class="form-control" id="req"></textarea>
+                  <textarea type="text" name="requirement" class="form-control" id="req">{{$lomba->requirement}}</textarea>
                 </div>
                 <div class="mb-3">
                 <label for="image" class="form-label">Upload Image</label>

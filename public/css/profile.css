@@ -1,0 +1,123 @@
+.bg-black {
+    background: #1F1F1F;
+    background-size: 100%;
+}
+
+.profilesec {
+    padding-top: 188.5px;
+}
+
+.profilesec span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+
+    /* primer */
+
+    color: #B71818;
+}
+
+.profilesec h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+
+    /* 2 */
+
+    color: #F7F7F7;
+
+}
+
+.file #buttonid {
+    position: absolute;
+width: 38px;
+height: 38px;
+left: 543px;
+top: 133px;
+
+/* primer */
+
+background: #B71818;
+border-radius: 40px;
+}
+
+form label {
+    font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+/* identical to box height, or 178% */
+
+text-align: center;
+
+color: #000000;
+
+opacity: 0.7;
+}
+
+form input, form textarea {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    
+    
+    
+    /* 1 */
+    
+    color: #1F1F1F;
+}
+
+form .rounded {
+    background: rgba(152, 20, 20, 0.03);
+border: 1px solid rgba(152, 20, 20, 0.5);
+border-radius: 5px;
+}
+
+form .buton {
+    padding-bottom: 46px;
+}
+
+form button {
+    border: 1px solid #981414;
+    border-radius: 10px;
+    font-style: normal;
+    margin-top: 39px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 178% */
+    width: 160px;
+height: 49px;
+text-decoration: none;
+text-align:center;
+
+    /* primer */
+
+    color: #B71818;
+
+}
+
+form #btn-submit {
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin-top: 39px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+
+    text-align: center;
+    width: 160px;
+height: 49px;
+
+    color: #FFFFFF;
+    background: #B71818;
+}

@@ -152,3 +152,24 @@
 
 
 }
+
+.detail a:hover {
+    background: transparent;
+    border-radius: 9.14976px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.2995px;
+    line-height: 29px;
+    border: 2px solid #B71818;
+    /* identical to box height, or 160% */
+
+    text-align: center;
+    text-decoration: none;
+    
+
+    /* 2 */
+
+    color: #B71818;
+
+
+}

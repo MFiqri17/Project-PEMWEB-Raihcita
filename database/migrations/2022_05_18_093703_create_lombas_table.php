@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('organizer');
-            $table->date('startDate');
-            $table->date('endDate');
+            $table->string('startDate');
+            $table->string('endDate');
             $table->string('link');
             $table->string('description');
             $table->string('requirement');

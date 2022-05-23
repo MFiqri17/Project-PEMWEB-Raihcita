@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg  bg-transparent ">
-    <div class="container-fluid">
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">.
       <a class="navbar-brand" href="#"><img src="/img/RaihAsa.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,8 +21,40 @@
               <img style="border-radius: 50%; width: 69px; height: 69px;" src="{{ asset('storage/' . auth()->user()->image)}}" alt=""> 
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
+              <li><a class="dropdown-item profile"
+                style="    
+                font-style: normal;
+                font-weight: 600;
+                font-size: 13.8521px;
+                line-height: 17px;
+                /* identical to box height */
+            
+                text-align: center;
+                color: #000000;
+                margin-bottom: 52.26px;"
+                 
+                href="{{route('profile', auth()->user()->id)}}">Profile</a></li>
+              <li>
+                <a  
+                style="    
+                font-style: normal;
+                font-weight: 600;
+                font-size: 13.8521px;
+                line-height: 17px;
+                /* identical to box height */
+            
+                text-align: center;
+                color: #989898;
+                text-decoration:none;"
+                
+                href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  Logout
+              </a>
+              
+              <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                  @csrf
+              </form>
+              </li>
             </ul>
           </li>
           @else
@@ -37,3 +69,4 @@
       </div>
     </div>
   </nav>
+

@@ -49,14 +49,14 @@
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         @include('components.sidebar')
         <div class="page-wrapper"> 
-            <form action="{{route('StoreaddBeasiswa')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('StoreaddLomba')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                  <label for="name" class="form-label">Beasiswa Name</label>
+                  <label for="name" class="form-label">Lomba Name</label>
                   <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="organizer" class="form-label">Beasiswa Organizer</label>
+                  <label for="organizer" class="form-label">Lomba Organizer</label>
                   <input type="text" name="organizer" class="form-control" id="organizer">
                 </div>
                 <div class="mb-3">

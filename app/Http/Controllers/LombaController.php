@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Beasiswa;
+use App\Models\Lomba;
 use App\Http\Middleware\Auth;
 
-class BeasiswaControllers extends Controller
+class LombaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,23 +16,23 @@ class BeasiswaControllers extends Controller
 
     public function show(){
         
-        return view('beasiswa', ['beasiswas' => Beasiswa::latest()->filter(request(['search']))->paginate(6)]);
+        return view('lomba', ['lombas' => Lomba::latest()->filter(request(['search']))->paginate(6)]);
     }
 
     public function detail($id){
-        $beasiswa = Beasiswa::findorfail($id);
-        return view('detailBeasiswa', compact('beasiswa'));
+        $lomba = lomba::findorfail($id);
+        return view('detaillomba', compact('lomba'));
     }
 
     public function index() // For Admin
     {
-        $beasiswa = Beasiswa::all();
-        return view('dashbord', compact('beasiswa'));
+        $lomba = Lomba::all();
+        return view('dashboardLomba', compact('lomba'));
     }
 
     public function adminForm()
     {
-        return view('addBeasiswa');
+        return view('addlomba');
     }
 
     /**
@@ -65,15 +65,15 @@ class BeasiswaControllers extends Controller
             'image' => 'image|file|max:1000|mimes:jpg,png,jpeg,gif',
         ]);
         
-        $beasiswa = new Beasiswa();
+        $lomba = new Lomba();
 
         if($request->file('image')){
-            $beasiswa->image = $request->file('image')->store('beasiswa-images');
+            $lomba->image = $request->file('image')->store('lomba-images');
         }
-        $beasiswa->fill($validatedData);
-        $beasiswa->save();
+        $lomba->fill($validatedData);
+        $lomba->save();
         
-        return redirect('/dashboard/beasiswa');
+        return redirect('/dashboard/lomba');
 
     }
 
@@ -93,8 +93,8 @@ class BeasiswaControllers extends Controller
 
 
      public function edit(Request $request, $id) {
-        $beasiswa = Beasiswa::findOrFail($id);
-        return view('updateBeasiswa', compact('beasiswa'));
+        $lomba = Lomba::findOrFail($id);
+        return view('updatelomba', compact('lomba'));
      }
 
     /**
@@ -115,18 +115,18 @@ class BeasiswaControllers extends Controller
         // 'description' => 'required',
         // 'image' => 'image|file|max:1000|mimes:jpg,png,jpeg,gif',
 
-            $beasiswa = Beasiswa::findOrFail($id);
-            $beasiswa->name = $request->name;
-            $beasiswa->organizer = $request->organizer;
-            $beasiswa->startDate = $request->startDate;
-            $beasiswa->endDate = $request->endDate;
-            $beasiswa->link = $request->link;
-            $beasiswa->description = $request->description;
-            $beasiswa->requirement = $request->requirement;
+            $lomba = Lomba::findOrFail($id);
+            $lomba->name = $request->name;
+            $lomba->organizer = $request->organizer;
+            $lomba->startDate = $request->startDate;
+            $lomba->endDate = $request->endDate;
+            $lomba->link = $request->link;
+            $lomba->description = $request->description;
+            $lomba->requirement = $request->requirement;
             if($request->file('image')){
-                $beasiswa->image = $request->file('image')->store('beasiswa-images');
+                $lomba->image = $request->file('image')->store('lomba-images');
             }
-            $beasiswa->save();
+            $lomba->save();
             
             return redirect('/dashboard');
         
@@ -138,9 +138,9 @@ class BeasiswaControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Beasiswa $beasiswa)
+    public function destroy(Lomba $lomba)
     {
-        $beasiswa->delete();
+        $lomba->delete();
         return redirect('/dashboard')->with('success', 'Data Beasiswa Berhasil Dihapus');
     }
 }

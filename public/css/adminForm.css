@@ -1,3 +1,47 @@
 .page-wrapper {
-    padding: 118px 380px 118px 380px;
+    padding: 118px 380px 150px 380px;
+}
+
+form label {
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 30px;
+/* identical to box height, or 188% */
+
+
+color: #000000;
+}
+
+ form input, form textarea {
+    border: 2px solid #CCC !important;
+
+
+}
+
+form .btn-primary {
+    background: #B71818;
+border-radius: 4px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+position: absolute;
+width: 199px;
+height: 44px;
+left: 70.06%;
+right: 12.99%;
+top: 88.11%;
+bottom: 4%;
+}
+
+form .btn-primary:hover {
+    background: transparent;
+    color: #B71818;
+    border: 2px solid #B71818;
 }
